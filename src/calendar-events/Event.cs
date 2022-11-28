@@ -23,7 +23,7 @@ public class Event : IEvent
 
     public void DelayDate(int days)
     {
-        throw new NotImplementedException();
+        EventDate = EventDate.AddDays(days);
     }
 
     public string PrintEvent(string format)

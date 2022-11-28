@@ -27,10 +27,12 @@ public class TestReq1
     }
 
     [Theory(DisplayName = "Deve atrasar a data de um evento corretamente")]
-    [InlineData()]
+    [InlineData("Jogo da Copa", "2022-11-28", 2, "2022-11-30")]
     public void TestEventDelayDate(string title, string date, int days, string expected)
     {
-        throw new NotImplementedException();
+        var newEvent = new Event(title, date);
+        newEvent.DelayDate(days);
+        newEvent.EventDate.Should().Be(DateTime.Parse(expected));
         
     }
 
