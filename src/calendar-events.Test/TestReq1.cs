@@ -18,10 +18,12 @@ public class TestReq1
     }
 
     [Theory(DisplayName = "Deve cadastrar um evento com o construtor sem descrição")]
-    [InlineData()]
+    [InlineData("Jogo da Copa", "2022-11-28")]
     public void TestEventHalfConstructor(string title, string date)
     {
-        throw new NotImplementedException();   
+        var newEvent = new Event(title, date);
+        newEvent.Title.Should().Be(title);
+        newEvent.EventDate.Should().Be(DateTime.Parse(date));   
     }
 
     [Theory(DisplayName = "Deve atrasar a data de um evento corretamente")]
