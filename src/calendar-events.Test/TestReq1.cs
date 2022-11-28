@@ -8,10 +8,13 @@ namespace calendar_events.Test;
 public class TestReq1
 {
     [Theory(DisplayName = "Deve cadastrar um evento com o construtor completo")]
-    [InlineData()]
+    [InlineData("Jogo da Copa", "2022-11-28", "Brasil vs Suiça")]
     public void TestEventFullConstructor(string title, string date, string description)
     {
-        throw new NotImplementedException();
+        var newEvent = new Event(title, date, description);
+        newEvent.Title.Should().Be(title);
+        newEvent.EventDate.Should().Be(DateTime.Parse(date));
+        newEvent.Description.Should().Be(description);
     }
 
     [Theory(DisplayName = "Deve cadastrar um evento com o construtor sem descrição")]
