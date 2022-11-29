@@ -12,140 +12,90 @@
       },
       "results": [
         {
-          "ruleId": "CS1519",
-          "level": "error",
-          "message": "Token inválido '<' na declaração de membro de classe, de registro, de struct ou de interface",
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/cathe/Documentos/Trybe/Aceleracao/acc-csharp-09-project-calendar-events/src/calendar-events/EventList.cs",
                 "region": {
-                  "startLine": 8,
+                  "startLine": 44,
+                  "startColumn": 15,
+                  "endLine": 44,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/cathe/Documentos/Trybe/Aceleracao/acc-csharp-09-project-calendar-events/src/calendar-events/EventList.cs",
+                "region": {
+                  "startLine": 56,
                   "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 17
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS1519",
-          "level": "error",
-          "message": "Token inválido ';' na declaração de membro de classe, de registro, de struct ou de interface",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/cathe/Documentos/Trybe/Aceleracao/acc-csharp-09-project-calendar-events/src/calendar-events/EventList.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 24,
-                  "endLine": 8,
-                  "endColumn": 25
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS1001",
-          "level": "error",
-          "message": "Identificador esperado",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/cathe/Documentos/Trybe/Aceleracao/acc-csharp-09-project-calendar-events/src/calendar-events/EventList.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 21,
-                  "endLine": 11,
-                  "endColumn": 22
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS1001",
-          "level": "error",
-          "message": "Identificador esperado",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/cathe/Documentos/Trybe/Aceleracao/acc-csharp-09-project-calendar-events/src/calendar-events/EventList.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 25,
-                  "endLine": 11,
+                  "endLine": 56,
                   "endColumn": 26
                 }
               }
             }
-          ]
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
         },
         {
-          "ruleId": "CS1001",
-          "level": "error",
-          "message": "Identificador esperado",
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/cathe/Documentos/Trybe/Aceleracao/acc-csharp-09-project-calendar-events/src/calendar-events/EventList.cs",
                 "region": {
-                  "startLine": 25,
-                  "startColumn": 21,
-                  "endLine": 25,
-                  "endColumn": 22
+                  "startLine": 66,
+                  "startColumn": 16,
+                  "endLine": 66,
+                  "endColumn": 26
                 }
               }
             }
-          ]
-        },
-        {
-          "ruleId": "CS1001",
-          "level": "error",
-          "message": "Identificador esperado",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/cathe/Documentos/Trybe/Aceleracao/acc-csharp-09-project-calendar-events/src/calendar-events/EventList.cs",
-                "region": {
-                  "startLine": 25,
-                  "startColumn": 29,
-                  "endLine": 25,
-                  "endColumn": 30
-                }
-              }
-            }
-          ]
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
         }
       ],
       "rules": {
-        "CS1001": {
-          "id": "CS1001",
-          "defaultLevel": "error",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1001)",
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Desreferência de uma referência possivelmente nula.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,
             "tags": [
               "Compiler",
-              "Telemetry",
-              "NotConfigurable"
-            ]
-          }
-        },
-        "CS1519": {
-          "id": "CS1519",
-          "defaultLevel": "error",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1519)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry",
-              "NotConfigurable"
+              "Telemetry"
             ]
           }
         }

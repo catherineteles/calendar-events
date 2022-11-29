@@ -5,10 +5,10 @@ public class EventList
 {
     private class Node
     {
-        public <> Value;
+        public Event Value;
         public Node? Next;
 
-        public Node(<> t)
+        public Node(Event t)
         {
             Value = t;
             Next = null;
@@ -22,7 +22,7 @@ public class EventList
         Head = null;
     }
 
-    public void Add(<> input) 
+    public void Add(Event input) 
     {
         if (Head == null)
         {
