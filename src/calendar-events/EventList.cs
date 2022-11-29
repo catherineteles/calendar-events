@@ -43,7 +43,7 @@ public class EventList
         Node? printNode = Head;
         while(printNode.Next != null)
         {
-            
+            Console.Write(printNode.Value.PrintEvent(format));
         }
         
     }
@@ -68,12 +68,38 @@ public class EventList
 
     public int SearchByTitle(string title)
     {
-        throw new NotImplementedException();     
+        Node? currentNode = Head;
+        int index = 0;
+        while(currentNode != null)
+        {
+            if (currentNode.Value.Title == title)
+            {
+                return index;
+            }
+
+            currentNode = currentNode.Next;
+
+            index += 1;
+        }
+        throw new InvalidOperationException("Elemento não encontrado");      
     }
 
     public int SearchByDate(string dateSearch)
     {
-        throw new NotImplementedException();   
+        Node? currentNode = Head;
+        int index = 0;
+        while(currentNode != null)
+        {
+            if (currentNode.Value.EventDate == DateTime.Parse(dateSearch))
+            {
+                return index;
+            }
+
+            currentNode = currentNode.Next;
+
+            index += 1;
+        }
+        throw new InvalidOperationException("Elemento não encontrado");
     }
     
 }
