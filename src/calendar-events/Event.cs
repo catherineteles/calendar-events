@@ -28,6 +28,10 @@ public class Event : IEvent
 
     public string PrintEvent(string format)
     {
-        throw new NotImplementedException();      
+        string normalPrint = $"Evento = {Title}\nDate = {EventDate:d}\n";     
+        string detailedPrint = $"Evento = {Title}\nDate = {EventDate:d}\nDescription = {Description}";
+
+        if (format == "detailed") return detailedPrint;  
+        else return normalPrint;  
     }
 }

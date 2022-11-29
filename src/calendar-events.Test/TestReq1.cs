@@ -37,10 +37,13 @@ public class TestReq1
     }
 
     [Theory(DisplayName = "Deve imprimir um evento corretamente")]
-    [InlineData()]    
+    [InlineData("Jogo da Copa", "2022-11-28", "Brasil vs Suiça", "detailed", "Evento = Jogo da Copa\nDate = 2022-11-28\nDescription = Brasil vs Suiça")]    
+    [InlineData("Jogo da Copa", "2022-11-28", "Brasil vs Suiça", "normal", "Evento = Jogo da Copa\nDate = 2022-11-28\n")]    
     public void TestPrintEvent(string title, string date, string description, string format, string expected)
     {
-        throw new NotImplementedException(); 
+        var newEvent = new Event(title, date, description);
+
+        newEvent.PrintEvent(format).Should().Be(expected); 
     }
     
     
